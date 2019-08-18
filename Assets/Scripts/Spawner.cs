@@ -11,7 +11,7 @@ public class Spawner : MonoBehaviour {
 
     private const string filePath = @"C:\Users\Public\Documents\Unity Projects\Joris' Projects\Neural Network\Saves\brain";
     private const string mapPath = @"C:\Users\Public\Documents\Unity Projects\Joris' Projects\Neural Network\Maps\";
-    private const string activeMap = "1.png";
+    private const string activeMap = "5.png";
 
     private const int PLAYERS = 100;
 
@@ -99,7 +99,7 @@ public class Spawner : MonoBehaviour {
             Player player = (Player)Instantiate(player_go, position, Quaternion.Euler(0, 0, 0));
 
             NeuralNetwork network = null;
-            //network = new NeuralNetwork(filePath);
+            network = new NeuralNetwork(filePath);
 
             player.Initialize(network);
 
